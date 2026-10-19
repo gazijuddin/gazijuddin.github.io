@@ -8,6 +8,16 @@
 <meta property="og:title" content="Gazi J. Uddin">
 <meta property="og:description" content="Environmental and resource economist working on carbon markets, co-pollutants, and environmental justice.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://gazijuddin.github.io/">
+<meta property="og:image" content="https://gazijuddin.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gazi J. Uddin, environmental and resource economist">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://gazijuddin.github.io/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="color-scheme" content="light dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -118,6 +128,15 @@ ul.plain{list-style:none; margin:0; padding:0; display:flex; flex-direction:colu
 .cols{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:2.5rem}
 @media (max-width:700px){ .cols{grid-template-columns:minmax(0,1fr)} }
 .refs li{max-width:66ch; padding-left:1.5rem; text-indent:-1.5rem}
+details.ta{border-top:1px solid var(--rule); border-bottom:1px solid var(--rule)}
+details.ta summary{cursor:pointer; padding-block:.8rem; color:var(--muted); font-size:.9375rem; list-style:none; display:flex; gap:.6rem; align-items:baseline}
+details.ta summary::-webkit-details-marker{display:none}
+details.ta summary::before{content:"+"; font-family:var(--font-mono); color:var(--accent); width:.8em; flex:none}
+details.ta[open] summary::before{content:"\2212"}
+details.ta summary:hover{color:var(--ink)}
+details.ta summary:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
+details.ta .row:last-child{border-bottom:0}
+.note{color:var(--muted); font-size:.875rem}
 footer{color:var(--muted); font-size:.8125rem; border-top:1px solid var(--rule); padding-top:1.25rem}
 sub{font-size:.7em; line-height:0}
 @media (prefers-reduced-motion:no-preference){ html{scroll-behavior:smooth} }
@@ -199,23 +218,26 @@ sub{font-size:.7em; line-height:0}
 
     <section id="teaching" aria-labelledby="teaching-h">
       <h2 id="teaching-h"><span class="mono">Teaching</span>Courses taught</h2>
-      <p class="subhead">Sole instructor</p>
+      <p class="subhead">As sole instructor</p>
       <div class="rows">
         <div class="row"><div class="what"><b>ECON 35 · Games and Economic Behavior</b><span>Dartmouth College</span></div><div class="when">Spring 2026</div></div>
         <div class="row"><div class="what"><b>ECON 1 · The Price System: Analysis, Problems, and Policies</b><span>Dartmouth College</span></div><div class="when">Fall 2025, Winter 2026</div></div>
         <div class="row"><div class="what"><b>RES-ECON 107 · Hunger in the Global Economy</b><span>UMass Amherst</span></div><div class="when">Summer 2020–21; Fall 2021–23</div></div>
         <div class="row"><div class="what"><b>RES-ECON 312 · Introductory Econometrics</b><span>UMass Amherst</span></div><div class="when">Summer 2022</div></div>
       </div>
-      <p class="subhead">Teaching assistant</p>
-      <div class="rows">
-        <div class="row"><div class="what"><b>RES-ECON 702 · Econometric Methods</b><span>UMass Amherst, graduate</span></div><div class="when">Spring 2020, 2022</div></div>
-        <div class="row"><div class="what"><b>RES-ECON 712 · Applied Microeconomic Theory II</b><span>UMass Amherst, graduate</span></div><div class="when">Spring 2020</div></div>
-        <div class="row"><div class="what"><b>RES-ECON 312 · Introductory Econometrics</b><span>UMass Amherst</span></div><div class="when">Fall 2020</div></div>
-        <div class="row"><div class="what"><b>RES-ECON 213 · Intermediate Statistics</b><span>UMass Amherst</span></div><div class="when">Fall 2019</div></div>
-        <div class="row"><div class="what"><b>RES-ECON 112 · Introductory Statistics for the Social Sciences</b><span>UMass Amherst</span></div><div class="when">Fall 2024, Spring 2025</div></div>
-        <div class="row"><div class="what"><b>RES-ECON 107 · Hunger in the Global Economy</b><span>UMass Amherst</span></div><div class="when">2018–2024</div></div>
-        <div class="row"><div class="what"><b>ECON 452 · Econometrics</b><span>UMass Boston</span></div><div class="when">2015–2016</div></div>
-      </div>
+      <details class="ta">
+        <summary>Teaching assistant · 7 courses, UMass Amherst and UMass Boston, 2015–2025</summary>
+        <div class="rows">
+          <div class="row"><div class="what"><b>RES-ECON 702 · Econometric Methods</b><span>UMass Amherst, graduate</span></div><div class="when">Spring 2020, 2022</div></div>
+          <div class="row"><div class="what"><b>RES-ECON 712 · Applied Microeconomic Theory II</b><span>UMass Amherst, graduate</span></div><div class="when">Spring 2020</div></div>
+          <div class="row"><div class="what"><b>RES-ECON 312 · Introductory Econometrics</b><span>UMass Amherst</span></div><div class="when">Fall 2020</div></div>
+          <div class="row"><div class="what"><b>RES-ECON 213 · Intermediate Statistics</b><span>UMass Amherst</span></div><div class="when">Fall 2019</div></div>
+          <div class="row"><div class="what"><b>RES-ECON 112 · Introductory Statistics for the Social Sciences</b><span>UMass Amherst</span></div><div class="when">Fall 2024, Spring 2025</div></div>
+          <div class="row"><div class="what"><b>RES-ECON 107 · Hunger in the Global Economy</b><span>UMass Amherst</span></div><div class="when">2018–2024</div></div>
+          <div class="row"><div class="what"><b>ECON 452 · Econometrics</b><span>UMass Boston</span></div><div class="when">2015–2016</div></div>
+        </div>
+      </details>
+      <p class="note">Teaching evaluations available on request.</p>
     </section>
 
     <section id="cv" aria-labelledby="cv-h">
