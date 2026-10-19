@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gazi J. Uddin</title>
+<meta name="description" content="Gazi J. Uddin, Ph.D. Environmental and resource economist working on carbon markets, co-pollutants, and environmental justice.">
+<meta property="og:title" content="Gazi J. Uddin">
+<meta property="og:description" content="Environmental and resource economist working on carbon markets, co-pollutants, and environmental justice.">
+<meta property="og:type" content="website">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: fixed identity column on the left (name, field, contact), long-form scholarly content on the right; stacks to one column on phones. */
+:root{
+  --paper:#f6f8f7;      /* cool off-white, slight spruce bias */
+  --surface:#ffffff;
+  --ink:#16231f;        /* spruce-black */
+  --muted:#55655f;
+  --rule:#d6dfdb;
+  --accent:#1f5d4c;     /* deep spruce */
+  --sulfur:#a77a12;     /* muted ochre, used sparingly */
+  --font-display:"Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --font-body:"Public Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --s-1:.8125rem; --s0:1rem; --s1:1.125rem; --s2:1.375rem; --s3:1.75rem; --s4:2.5rem;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f1614; --surface:#151f1c; --ink:#e3ebe7; --muted:#9aaaa3; --rule:#28352f;
+    --accent:#7cc4ad; --sulfur:#d9ab47; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f1614; --surface:#151f1c; --ink:#e3ebe7; --muted:#9aaaa3; --rule:#28352f;
+  --accent:#7cc4ad; --sulfur:#d9ab47; color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--paper); color:var(--ink);
+  font-family:var(--font-body); font-size:var(--s0); line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+}
+a{color:var(--accent); text-underline-offset:.18em; text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
+
+.wrap{
+  max-width:72rem; margin:0 auto; padding-block:clamp(2rem,6vw,4.5rem);
+  display:grid; grid-template-columns:minmax(0,18rem) minmax(0,1fr); gap:clamp(2rem,6vw,5rem);
+}
+@media (max-width:820px){ .wrap{grid-template-columns:minmax(0,1fr); gap:2.5rem} }
+
+/* Identity column */
+.id{align-self:start; position:sticky; top:calc(env(safe-area-inset-top,0px) + 2rem); display:flex; flex-direction:column; gap:1.5rem}
+@media (max-width:820px){ .id{position:static} }
+.mono{font-family:var(--font-mono); font-size:var(--s-1); letter-spacing:.02em}
+.kicker{color:var(--muted); text-transform:uppercase; letter-spacing:.09em; font-size:.75rem}
+h1{font-family:var(--font-display); font-weight:600; font-size:var(--s4); line-height:1.05; margin:0; text-wrap:balance; font-optical-sizing:auto; letter-spacing:-.01em}
+.role{margin:0; color:var(--muted); font-size:var(--s0); line-height:1.5}
+.role strong{color:var(--ink); font-weight:500}
+.links{display:flex; flex-direction:column; gap:.4rem; margin:0; padding:0; list-style:none}
+.contact{display:flex; flex-direction:column; gap:.5rem; padding-top:1.25rem; border-top:1px solid var(--rule)}
+.email-row{display:flex; flex-wrap:wrap; align-items:center; gap:.5rem}
+.email{font-family:var(--font-mono); font-size:.875rem; user-select:all; word-break:break-all}
+.copy{
+  font:500 .75rem var(--font-body); letter-spacing:.04em; text-transform:uppercase;
+  color:var(--accent); background:transparent; border:1px solid var(--rule); border-radius:3px;
+  padding:.25rem .55rem; cursor:pointer;
+}
+.copy:hover{border-color:var(--accent)}
+nav.toc{display:flex; flex-direction:column; gap:.3rem}
+nav.toc a{color:var(--muted); text-decoration:none; font-size:.9375rem}
+nav.toc a:hover{color:var(--accent)}
+@media (max-width:820px){ nav.toc{flex-direction:row; flex-wrap:wrap; gap:.4rem 1.1rem} }
+
+/* Content column */
+main{min-width:0; display:flex; flex-direction:column; gap:clamp(3rem,7vw,4.5rem)}
+section{display:flex; flex-direction:column; gap:1.25rem; scroll-margin-top:2rem}
+h2{font-family:var(--font-display); font-weight:600; font-size:var(--s3); margin:0; line-height:1.2; text-wrap:balance}
+h2 .mono{display:block; color:var(--sulfur); font-weight:500; margin-bottom:.35rem; text-transform:uppercase; letter-spacing:.09em; font-size:.75rem; font-family:var(--font-mono)}
+h3{font-family:var(--font-display); font-weight:600; font-size:var(--s2); margin:0; line-height:1.3; text-wrap:balance}
+p{margin:0; max-width:66ch}
+.lede{font-family:var(--font-display); font-size:var(--s2); line-height:1.45; max-width:34em; text-wrap:pretty}
+.prose{display:flex; flex-direction:column; gap:1rem}
+
+.paper{display:flex; flex-direction:column; gap:.6rem; padding-block:1.5rem; border-top:1px solid var(--rule)}
+.paper:first-of-type{border-top:0; padding-top:0}
+.meta{display:flex; flex-wrap:wrap; gap:.4rem .9rem; align-items:baseline; color:var(--muted)}
+.status{
+  font-family:var(--font-mono); font-size:.6875rem; text-transform:uppercase; letter-spacing:.08em;
+  color:var(--accent); border:1px solid currentColor; border-radius:2px; padding:.05rem .4rem;
+}
+.tags{display:flex; flex-wrap:wrap; gap:.4rem}
+.tag{font-family:var(--font-mono); font-size:.75rem; color:var(--muted); background:var(--surface); border:1px solid var(--rule); border-radius:2px; padding:.1rem .45rem}
+.paper .abstract{color:var(--ink)}
+.paper a.pdf{font-size:.9375rem; font-weight:500}
+
+ul.plain{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.65rem}
+.wip li{padding-left:1rem; position:relative}
+.wip li::before{content:""; position:absolute; left:0; top:.7em; width:.4rem; height:1px; background:var(--muted)}
+
+.rows{display:flex; flex-direction:column}
+.row{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:.25rem 1.5rem; padding-block:.8rem; border-top:1px solid var(--rule); align-items:baseline}
+.row:last-child{border-bottom:1px solid var(--rule)}
+.row .what{min-width:0}
+.row .what b{font-weight:600}
+.row .what span{display:block; color:var(--muted); font-size:.9375rem}
+.row .when{font-family:var(--font-mono); font-size:.8125rem; color:var(--muted); text-align:right; font-variant-numeric:tabular-nums}
+@media (max-width:520px){ .row{grid-template-columns:minmax(0,1fr)} .row .when{text-align:left} }
+
+.subhead{font-family:var(--font-body); font-size:.75rem; text-transform:uppercase; letter-spacing:.09em; color:var(--muted); font-weight:600; margin:.75rem 0 0}
+.cols{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:2.5rem}
+@media (max-width:700px){ .cols{grid-template-columns:minmax(0,1fr)} }
+.refs li{max-width:66ch; padding-left:1.5rem; text-indent:-1.5rem}
+footer{color:var(--muted); font-size:.8125rem; border-top:1px solid var(--rule); padding-top:1.25rem}
+sub{font-size:.7em; line-height:0}
+@media (prefers-reduced-motion:no-preference){ html{scroll-behavior:smooth} }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <aside class="id">
+    <div style="display:flex;flex-direction:column;gap:.75rem">
+      <span class="kicker mono">Environmental &amp; Resource Economics</span>
+      <h1>Gazi J. Uddin</h1>
+      <p class="role"><strong>Ph.D., Resource Economics</strong><br>University of Massachusetts Amherst</p>
+    </div>
+
+    <nav class="toc" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#cv">Education &amp; honors</a>
+      <a href="#reports">Policy reports</a>
+    </nav>
+
+    <div class="contact">
+      <span class="kicker mono">Contact</span>
+      <div class="email-row">
+        <span class="email" id="email">gazijuddin@gmail.com</span>
+        <button class="copy" id="copy-email" type="button">Copy</button>
+      </div>
+      <ul class="links">
+        <li><a href="https://scholar.google.com/citations?user=TdGXrG0AAAAJ&amp;hl=en">Google Scholar</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <section id="about" aria-labelledby="about-h">
+      <h2 id="about-h" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">About</h2>
+      <p class="lede">I study how carbon pricing reshapes the distribution of local air pollution, and whether climate markets can widen the exposure gaps that disadvantaged communities already face.</p>
+      <div class="prose">
+        <p>I am an environmental and resource economist. I received my Ph.D. in Resource Economics from the University of Massachusetts Amherst in 2025.</p>
+        <p>My research sits at the intersection of environmental economics and environmental justice. CO<sub>2</sub> controls such as cap-and-trade also move co-pollutants like SO<sub>2</sub>, NO<sub>x</sub>, and fine particulates, which are local and unevenly mixed. Using theory and quasi-experimental methods, I ask who gains and who loses from those shifts, including in regions outside the regulated market that are exposed through electricity trade and pollution transport.</p>
+        <p>I have taught introductory microeconomics and game theory at Dartmouth College, and development economics and econometrics at UMass Amherst.</p>
+      </div>
+    </section>
+
+    <section id="research" aria-labelledby="research-h">
+      <h2 id="research-h"><span class="mono">Research</span>Working papers</h2>
+
+      <article class="paper">
+        <h3><a href="https://drive.google.com/file/d/1QLxkMoc5LvmXRdkIoDMCUK3A-aILLbQX/view?usp=drive_link">Leaking Environmental Justice: Evidence from the RGGI CO<sub>2</sub> Cap-and-Trade Program</a></h3>
+        <div class="meta"><span class="status">Job market paper</span><span>with Nathan W. Chan</span></div>
+        <p class="abstract">Regional CO<sub>2</sub> markets cap emissions across participating states, but the co-pollutants that accompany fossil generation are local. This paper asks whether the Regional Greenhouse Gas Initiative (RGGI) changed disparities in co-pollutant exposure by race and income, both in regulated states and in unregulated states exposed to leakage. We track emissions from power plants to receptor counties with a reduced-complexity air quality model and estimate effects with a difference-in-differences design that allows heterogeneous treatment effects. We find that the policy's effects on exposure were unevenly distributed, falling short for counties with larger Black populations and lower incomes, in regulated and neighboring unregulated regions alike.</p>
+        <div class="tags"><span class="tag">RGGI · 2009–</span><span class="tag">SO<sub>2</sub> transport</span><span class="tag">Leakage</span><span class="tag">DiD</span></div>
+      </article>
+
+      <article class="paper">
+        <h3>Optimal CO<sub>2</sub> Prices and Environmental Justice</h3>
+        <div class="meta"><span class="status">Working paper</span><span>with John K. Stranlund</span></div>
+        <p class="abstract">We characterize CO<sub>2</sub> pricing under environmental justice constraints that prevent existing inequities in ambient co-pollutant concentrations from worsening. In a model of joint control of CO<sub>2</sub> and one non-uniformly mixed co-pollutant, uniform CO<sub>2</sub> pricing at marginal damage is efficient if and only if the co-pollutant is itself regulated efficiently subject to the constraints. Otherwise, efficient CO<sub>2</sub> prices depart from marginal damage and generally vary across firms. The same condition governs when a uniform-price CO<sub>2</sub> market is cost-effective.</p>
+        <div class="tags"><span class="tag">Theory</span><span class="tag">Co-pollutants</span><span class="tag">Instrument design</span></div>
+      </article>
+
+      <article class="paper">
+        <h3>Regional CO<sub>2</sub> Markets and the Clean Energy Transition</h3>
+        <div class="meta"><span class="status">Working paper</span><span>sole-authored</span></div>
+        <p class="abstract">Does a subnational carbon market change the structure of the electricity sector? Using state-level panel data from 1999 to 2019 and a difference-in-differences design, I estimate RGGI's effects on generation and installed capacity by fuel. RGGI significantly reduced non-renewable generation and capacity, driven mainly by coal retirements. Renewable generation and capacity rose modestly, but the estimates are not statistically significant. Decarbonization under RGGI came mostly from retiring fossil plants rather than from building new renewables.</p>
+        <div class="tags"><span class="tag">EIA state panel</span><span class="tag">Coal retirement</span><span class="tag">DiD</span></div>
+      </article>
+
+      <div class="paper">
+        <p class="subhead" style="margin:0">Work in progress</p>
+        <ul class="plain wip">
+          <li>Incomplete CO<sub>2</sub> Markets and Co-Pollutant Leakage</li>
+          <li>Does a Regional CO<sub>2</sub> Market Worsen Environmental Justice in Participating States?</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="teaching" aria-labelledby="teaching-h">
+      <h2 id="teaching-h"><span class="mono">Teaching</span>Courses taught</h2>
+      <p class="subhead">Sole instructor</p>
+      <div class="rows">
+        <div class="row"><div class="what"><b>ECON 35 · Games and Economic Behavior</b><span>Dartmouth College</span></div><div class="when">Spring 2026</div></div>
+        <div class="row"><div class="what"><b>ECON 1 · The Price System: Analysis, Problems, and Policies</b><span>Dartmouth College</span></div><div class="when">Fall 2025, Winter 2026</div></div>
+        <div class="row"><div class="what"><b>RES-ECON 107 · Hunger in the Global Economy</b><span>UMass Amherst</span></div><div class="when">Summer 2020–21; Fall 2021–23</div></div>
+        <div class="row"><div class="what"><b>RES-ECON 312 · Introductory Econometrics</b><span>UMass Amherst</span></div><div class="when">Summer 2022</div></div>
+      </div>
+      <p class="subhead">Teaching assistant</p>
+      <div class="rows">
+        <div class="row"><div class="what"><b>RES-ECON 702 · Econometric Methods</b><span>UMass Amherst, graduate</span></div><div class="when">Spring 2020, 2022</div></div>
+        <div class="row"><div class="what"><b>RES-ECON 712 · Applied Microeconomic Theory II</b><span>UMass Amherst, graduate</span></div><div class="when">Spring 2020</div></div>
+        <div class="row"><div class="what"><b>RES-ECON 312 · Introductory Econometrics</b><span>UMass Amherst</span></div><div class="when">Fall 2020</div></div>
+        <div class="row"><div class="what"><b>RES-ECON 213 · Intermediate Statistics</b><span>UMass Amherst</span></div><div class="when">Fall 2019</div></div>
+        <div class="row"><div class="what"><b>RES-ECON 112 · Introductory Statistics for the Social Sciences</b><span>UMass Amherst</span></div><div class="when">Fall 2024, Spring 2025</div></div>
+        <div class="row"><div class="what"><b>RES-ECON 107 · Hunger in the Global Economy</b><span>UMass Amherst</span></div><div class="when">2018–2024</div></div>
+        <div class="row"><div class="what"><b>ECON 452 · Econometrics</b><span>UMass Boston</span></div><div class="when">2015–2016</div></div>
+      </div>
+    </section>
+
+    <section id="cv" aria-labelledby="cv-h">
+      <h2 id="cv-h"><span class="mono">Background</span>Education &amp; honors</h2>
+      <div class="cols">
+        <div style="display:flex;flex-direction:column;gap:.75rem;min-width:0">
+          <p class="subhead" style="margin:0">Education</p>
+          <div class="rows">
+            <div class="row"><div class="what"><b>Ph.D., Resource Economics</b><span>University of Massachusetts Amherst</span></div><div class="when">2025</div></div>
+            <div class="row"><div class="what"><b>M.A., Applied Economics</b><span>University of Massachusetts Boston</span></div><div class="when">2017</div></div>
+            <div class="row"><div class="what"><b>M.Sc., Economics</b><span>Jahangirnagar University, Bangladesh</span></div><div class="when">2011</div></div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.75rem;min-width:0">
+          <p class="subhead" style="margin:0">Honors &amp; fellowships</p>
+          <div class="rows">
+            <div class="row"><div class="what"><b>Dissertation Completion Fellowship</b><span>Graduate School, UMass Amherst</span></div><div class="when">2024</div></div>
+            <div class="row"><div class="what"><b>Research Engagement and Leadership Fellow</b><span>UMass Amherst</span></div><div class="when">2018</div></div>
+            <div class="row"><div class="what"><b>Award for Excellence in Economics</b><span>UMass Boston</span></div><div class="when">2017</div></div>
+          </div>
+        </div>
+      </div>
+      <p class="subhead">Fields</p>
+      <p>Environmental and natural resource economics; applied microeconomics; microeconomic theory; quantitative methods.</p>
+    </section>
+
+    <section id="reports" aria-labelledby="reports-h">
+      <h2 id="reports-h"><span class="mono">Policy</span>Published policy reports</h2>
+      <ul class="plain refs">
+        <li>Timmons, D., Lema-Driscoll, A., &amp; Uddin, G. (2017). <a href="https://ag.umass.edu/sites/ag.umass.edu/files/reports/timmons_-_biochar_report_10-16-17.pdf"><i>The Economics of Biochar Carbon Sequestration in Massachusetts</i></a>. UMass Clean Energy Extension.</li>
+        <li>Bhattacharya, D., Khan, T. I., Salma, U., &amp; Uddin, G. J. (2013). <a href="https://library.fes.de/pdf-files/iez/10354.pdf"><i>Lagging Behind: Lessons from the Least Developed Countries for a Development Agenda Post-2015</i></a>. Friedrich-Ebert-Stiftung, Dhaka.</li>
+        <li>Bhattacharya, D., Khan, T. I., Salma, U., &amp; Uddin, G. J. (2013). <a href="https://cpd.org.bd/wp-content/uploads/2013/09/Attaining-the-MDGs-in-LDCs.pdf"><i>Attaining the MDGs: How Successful Are the LDCs?</i></a> Centre for Policy Dialogue, Dhaka.</li>
+      </ul>
+    </section>
+
+    <footer>Gazi J. Uddin · gazijuddin@gmail.com · Updated October 2026</footer>
+  </main>
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('copy-email'), el=document.getElementById('email');
+  btn.addEventListener('click',function(){
+    var done=function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy'},1600)};
+    var fallback=function(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected'};
+    try{ navigator.clipboard.writeText(el.textContent).then(done,fallback) }catch(e){ fallback() }
+  });
+})();
+</script>
+
+</body>
+</html>
